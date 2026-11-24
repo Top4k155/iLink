@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
     private var cb = 246
     private var modeName = "Белый свет"
     private var volume = 17
+    private var mute = false
     private var rLumin = 255
     private var rSpeed = 100
     private var fadeStyle = "Перелив 1 (Радуга)"
@@ -224,14 +225,11 @@ class MainActivity : AppCompatActivity() {
             refreshCard()
             ctrl.sendDirect(BleController.cmdPower(false))
         }
-        b.btnMute.isCheckable = true
         b.btnMute.setOnClickListener {
-            val on = b.btnMute.isChecked
-            if (!requireLink()) {
-                b.btnMute.isChecked = !on
-                return@setOnClickListener
-            }
-            ctrl.sendDirect(BleController.cmdMute(on))
+            if (!requireLink()) return@setOnClickListener
+            mute = !mute
+            b.btnMute.isSelected = mute
+            ctrl.sendDirect(BleController.cmdMute(mute))
         }
 
         b.slBright.addOnChangeListener { _, v, fromUser ->
