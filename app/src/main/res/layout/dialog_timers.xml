@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Часы лампы" />
+
+        <TextView
+            style="@style/TextMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Перед записью будильников и таймеров синхронизируйте часы лампы с телефоном." />
+
+        <Button
+            android:id="@+id/btnSyncClock"
+            style="@style/Ghost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Синхронизировать часы" />
+
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Будильники" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbA1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Будильник 1"
+                android:textColor="@color/fg" />
+
+            <Button
+                android:id="@+id/btnA1Time"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07:00" />
+
+            <Button
+                android:id="@+id/btnA1Apply"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Записать" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbA2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Будильник 2"
+                android:textColor="@color/fg" />
+
+            <Button
+                android:id="@+id/btnA2Time"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07:00" />
+
+            <Button
+                android:id="@+id/btnA2Apply"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Записать" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbA3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Будильник 3"
+                android:textColor="@color/fg" />
+
+            <Button
+                android:id="@+id/btnA3Time"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07:00" />
+
+            <Button
+                android:id="@+id/btnA3Apply"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Записать" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Таймер подсветки" />
+
+        <TextView
+            style="@style/TextMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Лампа сама включается и выключается в заданное время." />
+
+        <CheckBox
+            android:id="@+id/cbLed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Таймер включён"
+            android:textColor="@color/fg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Включить в"
+                android:textColor="@color/fg" />
+
+            <Button
+                android:id="@+id/btnLedOnTime"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19:00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Выключить в"
+                android:textColor="@color/fg" />
+
+            <Button
+                android:id="@+id/btnLedOffTime"
+                style="@style/Ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23:00" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLedApply"
+            style="@style/Ghost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Записать таймер" />
+
+        <TextView
+            android:id="@+id/tvTimersStatus"
+            style="@style/TextMuted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>
